@@ -38,8 +38,8 @@ while True:
             print "****************************************************\n Done dowloading the Twit episode for Monday,",strftime("%b %d"),"\n \n The task finished at ",strftime("%a, %d %b %Y %H:%M:%S"), "\n****************************************************"
 
             # moving file
-            dir_src = "/Users/jose/Desktop/aa/"
-            dir_dst = "/Users/jose/Downloads/" 
+            dir_src = "/path/to/file/"
+            dir_dst = "/path/to/file/" 
 
             fileName = file_name
 
@@ -49,7 +49,7 @@ while True:
             shutil.move(src_file, dst_file)
 
              # open file
-            os.system("open /Users/jose/Downloads/" + fileName)
+            os.system("open /path/to/file/" + fileName)
 
             # time (in seconds) that the script will be paused/ sllep
             time.sleep(86400)

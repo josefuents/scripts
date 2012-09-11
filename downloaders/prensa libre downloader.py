@@ -9,7 +9,7 @@ print "\n==> This script started running on", strftime("%a %b %d"), "at", strfti
 
 while True:
     # defines when the operation will happen (production)
-    if time.strftime("%H") == "8" and time.strftime("%M") == "00":    
+    #if time.strftime("%H") == "8" and time.strftime("%M") == "00":    
        
         # where the content is coming from
         url = "http://especiales.prensalibre.com/PDFs/Ediciones/" + str(strftime("%Y")) + "/" + monthsOfTheYear[str(strftime("%m"))]+ "/" + str(strftime("%d")) + "/PDFs/PLMT" + str(strftime("%d%m%Y")) + ".pdf"
@@ -39,8 +39,8 @@ while True:
         print "\n====> Done dowloading Prensa Libre for,",strftime("%a %b %d"),"\n=====> The task finished on ",strftime("%a, %b %d %Y"), "at", strftime("%H:%M:%S"), 
         
         # moving file
-        dir_src = "/Users/jose/Desktop/aa/"
-        dir_dst = "/Users/jose/Downloads/" 
+        dir_src = "/path/to/file/"
+        dir_dst = "/path/to/file/" 
 
         fileName = file_name
 
@@ -50,7 +50,7 @@ while True:
         shutil.move(src_file, dst_file)
         
         # open file
-        os.system("open /Users/jose/Downloads/" + fileName)
+        os.system("open /path/to/file/" + fileName)
 
         # time (in seconds) that the script will be paused/ sllep
         time.sleep(30)
